@@ -1,6 +1,7 @@
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
+const port = process.env.PORT || 3001;
 
 const app = express();
 app.use(express.json());
@@ -48,8 +49,6 @@ app.post("/login", (req, res) => {
         }
     })
 })
-
-const port = 3001;
 
 app.listen(port, () => {
     console.log("Listening")
